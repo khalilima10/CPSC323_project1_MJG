@@ -27,7 +27,7 @@ def writeto(self):
         filewrite.write(line)
         filewrite.write("\n")
         filewrite.close()
-    if self.one != None: # see if it is the final state
+    if self.one != self: # see if it is the final state
         writeto(self.one) # if not goes to next state
     else:
         return # if yes then leaves function
@@ -118,6 +118,8 @@ def lexer(filename):
     q7.one = q8
     q9 = State(lexemes[9], tokens[9]) 
     q8.one = q9
+    q9.zero = q9
+    q9.one = q9
     
     # set up the labels of the table
     outfile = open("output.txt", "w")
