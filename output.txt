@@ -4,8 +4,8 @@ keyword             while
 separator               (
 identifier              t
 operator                <
-separator               )
 identifier          lower
+separator               )
 identifier              r
 operator                =
 real                28.00
